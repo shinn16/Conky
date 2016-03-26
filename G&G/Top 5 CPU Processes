@@ -1,0 +1,50 @@
+# Author Patrick Shinn
+# Last Updated 3/20/16
+
+# Use Xft?
+use_xft yes
+xftalpha 0.8
+text_buffer_size 2048
+
+# Sets text to uppercase
+uppercase no
+
+# Update interval in seconds
+update_interval 1
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+own_window_transparent yes
+own_window_type conky
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# Sets minimum horizontal size
+minimum_size 0 0
+
+# Formatting Variables
+font Monospace
+color1 1E8200
+
+alignment top_middle
+gap_x 280
+gap_y 20
+own_window_argb_value 0
+own_window_argb_visual no
+own_window_colour 000000
+TEXT
+${color1}Top System Processses [CPU]
+${color1}${hr 2}
+${color1}1.${top name 1} $alignr ${top cpu 1}%
+${color1}2.${top name 2} $alignr ${top cpu 2}%
+${color1}3.${top name 3} $alignr ${top cpu 3}%
+${color1}4.${top name 4} $alignr ${top cpu 4}%
+${color1}5.${top name 5} $alignr ${top cpu 5}%
+${voffset -30}
+
